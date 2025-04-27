@@ -1,17 +1,372 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Mi Portafolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio | Your Name</title>
+    <!-- Bulma CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom styles */
+        .hero.is-fullheight {
+            min-height: 100vh;
+        }
+        .profile-image {
+            border-radius: 50%;
+            max-width: 200px;
+            border: 5px solid white;
+        }
+        .section-title {
+            margin-bottom: 2rem;
+        }
+        .project-card {
+            transition: transform 0.3s;
+            height: 100%;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
 </head>
 <body>
-    <h1>¡Bienvenido a mi sitio!</h1>
-    <nav>
-        <ul>
-            <!-- Enlaces a tus proyectos -->
-            <li><a href="/proyecto-1/">Proyecto 1 (React)</a></li>
-            <li><a href="/proyecto-2/">Proyecto 2 (Jekyll)</a></li>
-            <li><a href="https://github.com/tu-usuario/otro-repo">Código en GitHub</a></li>
-        </ul>
+    <!-- Navigation -->
+    <nav class="navbar is-fixed-top is-dark" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="#">
+                    <strong>YourName</strong>
+                </a>
+                
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasic">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+            
+            <div id="navbarBasic" class="navbar-menu">
+                <div class="navbar-end">
+                    <a class="navbar-item" href="#about">About</a>
+                    <a class="navbar-item" href="#projects">Projects</a>
+                    <a class="navbar-item" href="#skills">Skills</a>
+                    <a class="navbar-item" href="#contact">Contact</a>
+                </div>
+            </div>
+        </div>
     </nav>
+
+    <!-- Hero Section -->
+    <section class="hero is-fullheight is-primary is-bold">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <figure class="image is-128x128" style="margin: 0 auto 1.5rem;">
+                    <img class="profile-image" src="https://via.placeholder.com/200" alt="Profile picture">
+                </figure>
+                <h1 class="title is-1">
+                    Your Name
+                </h1>
+                <h2 class="subtitle is-3">
+                    Web Developer | Student | Your Specialty
+                </h2>
+                <div class="buttons is-centered" style="margin-top: 2rem;">
+                    <a href="#contact" class="button is-light is-large">
+                        <span class="icon">
+                            <i class="fas fa-envelope"></i>
+                        </span>
+                        <span>Contact Me</span>
+                    </a>
+                    <a href="https://github.com/yourusername" target="_blank" class="button is-light is-large">
+                        <span class="icon">
+                            <i class="fab fa-github"></i>
+                        </span>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-foot">
+            <div class="container has-text-centered" style="padding-bottom: 2rem;">
+                <a href="#about" class="has-text-white">
+                    <i class="fas fa-chevron-down fa-2x"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="title is-2 has-text-centered section-title">About Me</h2>
+            
+            <div class="columns is-centered">
+                <div class="column is-8">
+                    <div class="content is-medium">
+                        <p>Hello! I'm [Your Name], a [your profession/student] passionate about [your interests]. I'm currently [your current activity, e.g., studying Computer Science at University].</p>
+                        <p>My journey in [your field] began when [your story]. Since then, I've worked on various projects including [brief mention of projects or technologies].</p>
+                        <p>When I'm not coding, I enjoy [your hobbies/interests].</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section has-background-light">
+        <div class="container">
+            <h2 class="title is-2 has-text-centered section-title">My Projects</h2>
+            
+            <div class="columns is-multiline">
+                <!-- Project 1 -->
+                <div class="column is-4">
+                    <div class="card project-card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="https://via.placeholder.com/400x300" alt="Project image">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="title is-4">Project Title</h3>
+                            <div class="content">
+                                <p>Brief description of the project and technologies used.</p>
+                                <div class="tags">
+                                    <span class="tag is-primary">JavaScript</span>
+                                    <span class="tag is-info">React</span>
+                                    <span class="tag is-success">Node.js</span>
+                                </div>
+                            </div>
+                            <a href="https://github.com/yourusername/project-repo" target="_blank" class="button is-small is-fullwidth">
+                                <span class="icon">
+                                    <i class="fab fa-github"></i>
+                                </span>
+                                <span>View on GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="column is-4">
+                    <div class="card project-card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="https://via.placeholder.com/400x300" alt="Project image">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="title is-4">Project Title</h3>
+                            <div class="content">
+                                <p>Brief description of the project and technologies used.</p>
+                                <div class="tags">
+                                    <span class="tag is-primary">Python</span>
+                                    <span class="tag is-warning">Django</span>
+                                    <span class="tag is-danger">PostgreSQL</span>
+                                </div>
+                            </div>
+                            <a href="https://github.com/yourusername/project-repo" target="_blank" class="button is-small is-fullwidth">
+                                <span class="icon">
+                                    <i class="fab fa-github"></i>
+                                </span>
+                                <span>View on GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="column is-4">
+                    <div class="card project-card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="https://via.placeholder.com/400x300" alt="Project image">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="title is-4">Project Title</h3>
+                            <div class="content">
+                                <p>Brief description of the project and technologies used.</p>
+                                <div class="tags">
+                                    <span class="tag is-primary">HTML/CSS</span>
+                                    <span class="tag is-link">Bulma</span>
+                                    <span class="tag is-info">JavaScript</span>
+                                </div>
+                            </div>
+                            <a href="https://github.com/yourusername/project-repo" target="_blank" class="button is-small is-fullwidth">
+                                <span class="icon">
+                                    <i class="fab fa-github"></i>
+                                </span>
+                                <span>View on GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="has-text-centered" style="margin-top: 2rem;">
+                <a href="https://github.com/yourusername?tab=repositories" target="_blank" class="button is-medium is-primary">
+                    <span class="icon">
+                        <i class="fab fa-github"></i>
+                    </span>
+                    <span>View All Projects</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="title is-2 has-text-centered section-title">Skills</h2>
+            
+            <div class="columns">
+                <div class="column is-6">
+                    <h3 class="title is-4">Technical Skills</h3>
+                    <div class="content">
+                        <ul>
+                            <li><strong>Programming Languages:</strong> JavaScript, Python, Java, etc.</li>
+                            <li><strong>Web Development:</strong> HTML5, CSS3, React, Node.js, etc.</li>
+                            <li><strong>Databases:</strong> MySQL, MongoDB, PostgreSQL</li>
+                            <li><strong>Tools & Platforms:</strong> Git, Docker, AWS, etc.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="column is-6">
+                    <h3 class="title is-4">Professional Skills</h3>
+                    <div class="content">
+                        <ul>
+                            <li>Problem Solving</li>
+                            <li>Team Collaboration</li>
+                            <li>Project Management</li>
+                            <li>Technical Writing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="has-text-centered" style="margin-top: 2rem;">
+                <a href="path/to/your/resume.pdf" download class="button is-medium is-link">
+                    <span class="icon">
+                        <i class="fas fa-download"></i>
+                    </span>
+                    <span>Download Resume</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section has-background-primary has-text-white">
+        <div class="container">
+            <h2 class="title is-2 has-text-centered section-title has-text-white">Get In Touch</h2>
+            
+            <div class="columns is-centered">
+                <div class="column is-6">
+                    <form>
+                        <div class="field">
+                            <label class="label has-text-white">Name</label>
+                            <div class="control">
+                                <input class="input" type="text" placeholder="Your Name">
+                            </div>
+                        </div>
+                        
+                        <div class="field">
+                            <label class="label has-text-white">Email</label>
+                            <div class="control">
+                                <input class="input" type="email" placeholder="Your Email">
+                            </div>
+                        </div>
+                        
+                        <div class="field">
+                            <label class="label has-text-white">Message</label>
+                            <div class="control">
+                                <textarea class="textarea" placeholder="Your Message"></textarea>
+                            </div>
+                        </div>
+                        
+                        <div class="field">
+                            <div class="control">
+                                <button class="button is-white is-outlined is-medium is-fullwidth">
+                                    <span class="icon">
+                                        <i class="fas fa-paper-plane"></i>
+                                    </span>
+                                    <span>Send Message</span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="has-text-centered" style="margin-top: 3rem;">
+                <div class="buttons is-centered">
+                    <a href="mailto:youremail@example.com" class="button is-white is-outlined">
+                        <span class="icon">
+                            <i class="fas fa-envelope"></i>
+                        </span>
+                    </a>
+                    <a href="https://github.com/yourusername" target="_blank" class="button is-white is-outlined">
+                        <span class="icon">
+                            <i class="fab fa-github"></i>
+                        </span>
+                    </a>
+                    <a href="https://linkedin.com/in/yourprofile" target="_blank" class="button is-white is-outlined">
+                        <span class="icon">
+                            <i class="fab fa-linkedin"></i>
+                        </span>
+                    </a>
+                    <a href="https://twitter.com/yourhandle" target="_blank" class="button is-white is-outlined">
+                        <span class="icon">
+                            <i class="fab fa-twitter"></i>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer has-background-dark has-text-white">
+        <div class="content has-text-centered">
+            <p>
+                &copy; <span id="year"></span> Your Name. All rights reserved.
+            </p>
+            <p>
+                Built with <i class="fas fa-heart has-text-danger"></i> and <a href="https://bulma.io" target="_blank" class="has-text-primary">Bulma</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+        
+        // Mobile navbar burger menu toggle
+        document.addEventListener('DOMContentLoaded', () => {
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+            
+            $navbarBurgers.forEach(el => {
+                el.addEventListener('click', () => {
+                    const target = el.dataset.target;
+                    const $target = document.getElementById(target);
+                    
+                    el.classList.toggle('is-active');
+                    $target.classList.toggle('is-active');
+                });
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html>
